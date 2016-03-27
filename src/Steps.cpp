@@ -28,12 +28,12 @@ int fibo(int num);
 int get_steps(int s)
 {
 	int res;
-	res =  fibo(s );
+	res =  fibo(s+1 );
 	return res;
 }
 int fibo(int num){
 	if (num == 0 || num == 1)
-		return 1;
+		return num;
 	else
 		return (fibo(num - 1) + fibo(num - 2));
 }
