@@ -22,14 +22,18 @@
 
 */
 #include "stdafx.h"
+int fibo(int num);
 
 
 int get_steps(int s)
 {
-
-	if (s == 0 || s == 1)
+	int res;
+	res =  fibo(s );
+	return res;
+}
+int fibo(int num){
+	if (num == 0 || num == 1)
 		return 1;
 	else
-		return (get_steps(s - 1) + get_steps(s - 2));
-	//return 0;
+		return (fibo(num - 1) + fibo(num - 2));
 }
